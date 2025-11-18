@@ -1,0 +1,168 @@
+Encapsulation
+
+Data Bundling: Storing state (fields) and behavior (methods) together inside a class.
+
+Data Hiding: Using the private access modifier to restrict direct access to internal data — user should only get relevant details.
+
+Why hide data?
+
+To restrict unauthorized access and protect data integrity.
+
+To make code simpler and more maintainable.
+
+Prevents direct modifications or corruption of internal state.
+
+If attribute names or logic change, only the class needs updates, not all its usages.
+
+this keyword:
+Refers to the current instance of a class (used to differentiate between instance and local variables).
+
+null keyword:
+A special value representing no object reference.
+
+Primitive fields can never be null — Java auto-initializes them:
+
+int, long → 0
+
+boolean → false
+
+double → 0.0
+
+Setters:
+Used for controlled assignment. We can add validations before updating values.
+
+Constructors
+
+Used to initialize an object when it’s created.
+
+Rules:
+
+Usually public (unless implementing Singleton).
+
+No return type.
+
+Name must match the class name.
+
+Types:
+
+Default / No-args constructor: Exists automatically if none is defined.
+
+Parameterized constructor: Takes parameters for initialization.
+
+Constructor Overloading: Multiple constructors with different parameter lists.
+
+Basic OOP Concepts
+
+Class: Blueprint for creating objects.
+
+Object: Actual instance of a class.
+
+Reference Variable: Stores the address of an object.
+
+new keyword: Creates a new object (allocates new memory).
+
+Static Keyword
+
+Used to define members at the class level (shared across all instances).
+
+Static Variable:
+
+Belongs to the class, not the object.
+
+Shared and reflected across all instances.
+
+Static Method:
+
+Belongs to the class.
+
+Can access only static members.
+
+POJO (Plain Old Java Object)
+
+A simple Java class that only stores data.
+
+Features:
+
+Private fields (for encapsulation).
+
+Public constructors, getters, and setters.
+
+Mutable: Field values can change after creation.
+
+Commonly used for data transfer, configuration, or ORM mapping (e.g., Hibernate).
+
+Record (Java 14+)
+
+Introduced to reduce boilerplate for data-carrying classes.
+
+Features:
+
+Immutable — fields cannot be modified after creation.
+
+Automatically provides:
+
+Constructor
+
+Accessors (getters)
+
+equals(), hashCode(), and toString()
+
+Inheritance
+
+A way of building hierarchy and passing common functionality to child classes.
+
+Key Points:
+
+Uses extends keyword.
+
+1 class → 1 parent (single inheritance).
+
+1 parent → multiple children.
+
+Parent = superclass, child = subclass.
+
+super keyword:
+
+Refers to the parent class.
+
+Used to call the parent’s constructor or methods.
+
+If not written, Java automatically adds a call to the parent’s default constructor.
+
+Access Rules:
+
+private members are not inherited.
+
+Use protected or public to allow inheritance.
+
+Polymorphism & Type Rules:
+
+A child object can be passed to a method expecting a parent type.
+
+At compile time, method calls are checked via reference type (parent).
+
+At runtime, actual method execution is decided by the object type (child).
+
+Hence, overriding works dynamically.
+
+Composition vs Inheritance
+
+Inheritance:
+
+“Is-a” relationship.
+
+Example: Dog is an Animal.
+
+Child extends parent → inherits functionality.
+
+Less flexible — tightly coupled to superclass.
+
+Composition:
+
+“Has-a” relationship.
+
+Example: Computer has a Motherboard, Monitor, etc.
+
+More flexible — allows adding/removing components easily.
+
+Enables code reuse without inheritance (via object references).
