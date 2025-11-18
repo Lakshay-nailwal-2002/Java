@@ -1,0 +1,26 @@
+AOP (Aspect-Oriented Programming) Core Concepts
+
+Cross-Cutting Concern → Common or duplicate code that is not part of core business logic, but is required across multiple modules.
+Examples: Logging, Authentication, Authorization, Exception Handling, Transaction Management
+
+Advice → What action you want to perform — the actual code to be executed at certain join points.
+Examples: Before, After, or Around method execution.
+
+Advice Type → Tells about the timing of execution, defined by annotation
+
+Pointcut → Where the advice should run — defines the set of join points (methods or classes) that will be intercepted.
+
+Aspect → A module that encapsulates both Advice and Pointcut — represents a complete cross-cutting concern.
+
+Weaver → The tool or framework that links aspects with the main application code (weaving).
+Examples: Spring AOP, AspectJ
+
+JoinPoint → A specific point in the program execution where advice can be applied.
+Examples: Method call, object creation, exception thrown, etc.
+
+@Before -- Do something before a method is called
+@After -- Do something after a method is executed irrespective if we got an exception or not.
+@AfterReturning -- Do something only when a method execute successfully
+@AfterThrowing -- Do something only when a method throw exception
+@Around -- Do something before and after a method call
+ProceedingJoinPoint -- It exposes the proceed method to support around annotation
