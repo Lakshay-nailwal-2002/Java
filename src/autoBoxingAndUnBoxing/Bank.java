@@ -14,7 +14,7 @@ public class Bank{
     private Customer getCustomer(String name){
         for( Customer customer: customers){
             if(customer.getName().equals(name) ) return customer;
-        }
+        } 
         return null;
     }
     
